@@ -1,169 +1,52 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  scroll-behavior: smooth;
-  transition: background 0.3s, color 0.3s;
-}
 
-.hero {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.hero.kecil {
-  padding: 60px 20px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: #111;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-}
-.logo span {
-  color: #00ffff;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a.active {
-  color: #00ffff;
-}
-
-.cta {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #00ffff;
-  color: black;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.highlight, .cta-section {
+/* ... sebelumnya tetap ... */
+/* Chart Container */
+.chart-section {
   padding: 60px 20px;
   text-align: center;
 }
-.grid-highlight, .grid-layanan {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-.card {
-  padding: 20px;
-  background: #f0f0f0;
-  border-radius: 12px;
+.chart-wrapper {
+  margin: 0 auto;
+  max-width: 900px;
 }
 
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
+/* Login Form */
+.login-form {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 10px 15px;
-  font-size: 18px;
-  background: #00ffff;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-}
-
-.form-kontak input, .form-kontak textarea {
+.login-form input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
-
-.form-kontak button {
+.login-form button {
   background: #00ffff;
   border: none;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
+  width: 100%;
 }
 
-.dark-mode {
-  background: #111;
-  color: white;
+/* Blog */
+.blog-section {
+  padding: 60px 20px;
 }
-
-.dark-mode .card {
-  background: #222;
-  color: white;
+.blog-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
-
-/* 404 */
-.not-found {
-  padding: 80px;
-  text-align: center;
-}
-
-/* Tambahan fitur */
-footer .footer-links {
-  margin-top: 10px;
-}
-footer a {
-  color: #00ffff;
-  text-decoration: none;
-  margin: 0 5px;
-  font-size: 14px;
-}
-
-/* Tombol WA */
-.wa-button {
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
-  z-index: 1000;
-}
-.wa-button img {
-  width: 50px;
-  height: 50px;
-}
-
-/* Responsive Nav */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background: #111;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    display: none;
-  }
-  .nav-links.show {
-    display: flex;
-  }
+.blog-card h3 {
+  margin-top: 0;
 }

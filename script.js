@@ -1,39 +1,30 @@
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-}
+// ... sebelumnya tetap ...
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-window.onscroll = function () {
-  const btn = document.getElementById("backToTop");
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    btn.style.display = "block";
+// Dummy login logic
+function handleLogin(e) {
+  e.preventDefault();
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+  if (user === "admin" && pass === "admin") {
+    alert("Login berhasil!");
+    window.location.href = "dashboard.html";
   } else {
-    btn.style.display = "none";
+    alert("Username atau password salah.");
   }
-};
-
-const typing = document.getElementById("typing");
-if (typing) {
-  let words = ["Bangun Masa Depan Finansialmu", "Trading Cerdas Bersama Kami", "Sinyal, Bot, Edukasi!"];
-  let i = 0;
-  setInterval(() => {
-    typing.textContent = words[i];
-    i = (i + 1) % words.length;
-  }, 2500);
 }
 
-// Tombol nav toggle (untuk mobile)
-const navToggle = document.getElementById("navToggle");
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    document.querySelector(".nav-links").classList.toggle("show");
+// Contoh render artikel blog
+const blogData = [
+  { title: "Cara Memulai Trading untuk Pemula", content: "Pelajari dasar-dasar analisa teknikal dan fundamental..." },
+  { title: "Apa Itu Leverage dalam Trading?", content: "Leverage memungkinkan Anda mengontrol posisi besar..." }
+];
+
+const blogContainer = document.getElementById("blogContainer");
+if (blogContainer) {
+  blogData.forEach(post => {
+    const div = document.createElement("div");
+    div.className = "blog-card";
+    div.innerHTML = `<h3>${post.title}</h3><p>${post.content}</p>`;
+    blogContainer.appendChild(div);
   });
-}
-
-// WhatsApp
-function openWhatsApp() {
-  window.open("https://wa.me/6281234567890", "_blank");
 }
