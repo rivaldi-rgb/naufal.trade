@@ -1,23 +1,27 @@
+
 function toggleDarkMode() {
-  document.body.classList.toggle("dark");
+  document.body.classList.toggle("dark-mode");
 }
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// Efek ketik otomatis
-const teks = "Bangun Masa Depan Finansialmu";
-let i = 0;
-const target = document.querySelector("h1");
-if (target) {
-  target.textContent = "";
-  function ketik() {
-    if (i < teks.length) {
-      target.textContent += teks.charAt(i);
-      i++;
-      setTimeout(ketik, 100);
-    }
+window.onscroll = function () {
+  const btn = document.getElementById("backToTop");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
   }
-  ketik();
+};
+
+const typing = document.getElementById("typing");
+if (typing) {
+  let words = ["Bangun Masa Depan Finansialmu", "Trading Cerdas Bersama Kami", "Sinyal, Bot, Edukasi!"];
+  let i = 0;
+  setInterval(() => {
+    typing.textContent = words[i];
+    i = (i + 1) % words.length;
+  }, 2500);
 }
