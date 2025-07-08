@@ -107,3 +107,29 @@ footer {
   cursor: pointer;
   font-weight: bold;
 }
+
+.dark {
+  background: #121212;
+  color: #ffffff;
+}
+
+.dark .card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .hero {
+  background: #1a1a1a;
+}
+
+.dark .cta {
+  background: #00e0ff;
+  color: black;
+}
+
+.nav-links button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
