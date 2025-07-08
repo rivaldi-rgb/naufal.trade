@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2em;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00e0ff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-content {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+}
+
+.hero-content .cta {
+  display: inline-block;
+  margin-top: 1.5em;
+  padding: 0.75em 2em;
+  background: #00e0ff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.grid-layanan {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2em;
+  border-radius: 10px;
+  min-width: 200px;
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+  background: #111;
+  color: #ccc;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00e0ff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bold;
+}
