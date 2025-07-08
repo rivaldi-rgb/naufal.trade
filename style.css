@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -128,4 +127,43 @@ footer {
 .not-found {
   padding: 80px;
   text-align: center;
+}
+
+/* Tambahan fitur */
+footer .footer-links {
+  margin-top: 10px;
+}
+footer a {
+  color: #00ffff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+/* Tombol WA */
+.wa-button {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 1000;
+}
+.wa-button img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+  .nav-links.show {
+    display: flex;
+  }
 }
